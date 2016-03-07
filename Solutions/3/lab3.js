@@ -16,9 +16,8 @@ function createKeyPair() {
         },
         true,
         ["sign", "verify"]
-
     ).then(function(keyPair) {
-        // Note: returns before done, does not return a Promise
+
         window.crypto.subtle.exportKey("spki", keyPair.publicKey
         ).then(function(spkiBuffer) {
             var spkiBytes = new Uint8Array(spkiBuffer);

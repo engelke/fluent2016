@@ -20,7 +20,6 @@ function createKeyPair() {
         // Export the public key portion
         window.crypto.subtle.exportKey("spki", keyPair.publicKey
         ).then(function(spkiBuffer) {
-            // This will likely run AFTER the createKeyPair function returns
             var spkiBytes = new Uint8Array(spkiBuffer);
             var spkiString = byteArrayToBase64(spkiBytes);
             var spkiBox = document.getElementById("publickey");
@@ -32,7 +31,6 @@ function createKeyPair() {
         // Export the private key part, in parallel to the public key
         window.crypto.subtle.exportKey("pkcs8", keyPair.privateKey
         ).then(function(pkcs8Buffer) {
-            // This will likely run AFTER the createKeyPair function returns
             var pkcs8Bytes = new Uint8Array(pkcs8Buffer);
             var pkcs8String = byteArrayToBase64(pkcs8Bytes);
             var pkcs8Box = document.getElementById("privatekey");
