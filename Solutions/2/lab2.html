@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password-based Key Derivation</title>
+    <link rel="stylesheet" href="lab2.css"/>
+    <script src="util.js"></script>
+    <script src="lab2.js"></script>
+    <script src="wiring.js"></script>
+</head>
+
+<body>
+    <h1>Password-based Key Derivation</h1>
+
+    <section class="passphrase">
+        <label for="passphrase">Pass phrase:</label> <input type="text" size="32" id="passphrase"/>
+    </section>
+
+    <section class="selectfile">
+        <input type="file" id="datafile"/><br/>
+        <button id="encrypt">Encrypt</button>
+        <button id="decrypt">Decrypt</button>
+    </section>
+</body>
+</html>

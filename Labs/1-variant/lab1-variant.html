@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symmetric Encryption</title>
+    <link rel="stylesheet" href="lab1-variant.css"/>
+    <script src="util.js"></script>
+    <script src="lab1-variant.js"></script>
+    <script src="wiring.js"></script>
+</head>
+
+<body>
+    <h1>Symmetric Encryption</h1>
+
+    <section class="key">
+        <label for="key">Key (hex):</label> <input type="text" size="32" id="key"/>
+        <button id="generateKey">Generate Key</button>
+    </section>
+
+    <section class="plaintext">
+        <label for="plaintext">Plaintext:</label>
+        <textarea id="plaintext" rows="10" cols="60"></textarea>
+        <button id="encrypt">Encrypt</button>
+    </section>
+
+    <section class="ciphertext">
+        <label for="iv">IV (hex):</label> <input type="text" size="32" id="iv"/>
+        <label for="ciphertext">Ciphertext (base64):</label>
+        <textarea id="ciphertext" rows="10" cols="60"></textarea>
+        <button id="decrypt">Decrypt</button>
+    </section>
+</body>
+</html>

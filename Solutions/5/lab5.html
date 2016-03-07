@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Copyright 2015 Info Tech, Inc. Provided under the MIT license. See LICENSE file for details. -->
+<html>
+<head>
+    <title>X.509 Certificate Creation</title>
+    <link rel="stylesheet" href="lab5.css"/>
+    <script src="common.js"></script>
+    <script src="asn1.js"></script>
+    <script src="x509_schema.js"></script>
+    <script src="x509_simpl.js"></script>
+    <script src="util.js"></script>
+    <script src="lab5.js"></script>
+    <script src="wiring.js"></script>
+</head>
+
+<body>
+    <h1>X.509 Certificate Creation</h1>
+
+    <section id="user-information">
+        <table>
+            <tr>
+                <td><label for="common-name">Common Name:</label></td>
+                <td><input type="text" id="common-name"/></td>
+            </tr>
+            <tr>
+                <td><label for="organization">Organization:</label></td>
+                <td><input type="text" id="organization"/></td>
+            </tr>
+            <tr>
+                <td><label for="organization-unit">Organization Unit:</label></td>
+                <td><input type="text" id="organization-unit"/></td>
+            </tr>
+            <tr>
+                <td><label for="country-code">Country Code:</label></td>
+                <td><input type="text" id="country-code" maxlength="2"/></td>
+            </tr>
+        </table>
+        <p><button id="create-certificate">Create Certificate</button></p>
+    </section>
+
+    <section id="certificate">
+        <h1>Certificate in PEM Format</h1>
+        <a id="certificate-download" download="certificate.pem">Download Certificate</a>
+        <pre id="pem-certificate"></pre>
+    </section>
+
+    <section id="public-key">
+        <h1>Public Key in PEM Format</h1>
+        <a id="public-key-download" download="publickey.pem">Download Public Key</a>
+        <pre id="pem-public-key"></pre>
+    </section>
+
+    <section id="private-key">
+        <h1>Private Key in PEM Format</h1>
+        <a id="private-key-download" download="privatekey.pem">Download Private Key</a>
+        <pre id="pem-private-key"></pre>
+    </section>
+
+</body>
+</html>

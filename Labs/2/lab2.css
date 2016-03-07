@@ -1,0 +1,25 @@
+
+body {
+    font-family: sans-serif;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+section textarea, section input {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+section button {
+    font-weight: bold;
+    margin-left: 20px;
+}

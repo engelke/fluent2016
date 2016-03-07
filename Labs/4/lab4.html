@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Public Key Encryption</title>
+    <link rel="stylesheet" href="lab4.css"/>
+    <script src="util.js"></script>
+    <script src="lab4.js"></script>
+    <script src="wiring.js"></script>
+</head>
+
+<body>
+    <h1>Public Key Encryption</h1>
+
+    <section class="Key Pair">
+        <button id="generatekeypair">Generate Key Pair</button>
+
+        <label for="publickey">Public Key:</label>
+        <textarea rows="10" columns="60" id="publickey"></textarea>
+
+        <label for="privatekey">Private Key:</label>
+        <textarea rows="10" columns="60" id="privatekey"></textarea>
+    </section>
+
+    <section class="selectfile">
+        <input type="file" id="datafile"/><br/>
+        <br/>
+
+        <label for="sessionkey">Encrypted Session Key:</label>
+        <textarea rows="10" columns="60" id="sessionkey"></textarea>
+
+        <br/>
+        <button id="encrypt">Encrypt</button>
+        <button id="decrypt">Decrypt</button>
+    </section>
+</body>
+</html>

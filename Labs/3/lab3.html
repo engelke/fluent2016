@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Signatures</title>
+    <link rel="stylesheet" href="lab3.css"/>
+    <script src="util.js"></script>
+    <script src="lab3.js"></script>
+    <script src="wiring.js"></script>
+</head>
+
+<body>
+    <h1>Digital Signatures</h1>
+
+    <section class="Key Pair">
+        <button id="generatekeypair">Generate Key Pair</button>
+
+        <label for="publickey">Public Key:</label>
+        <textarea rows="10" columns="60" id="publickey"></textarea>
+
+        <label for="privatekey">Private Key:</label>
+        <textarea rows="10" columns="60" id="privatekey"></textarea>
+    </section>
+
+    <section class="selectfile">
+        <input type="file" id="datafile"/><br/>
+
+        <label for="signature">Digital Signature:</label>
+        <textarea rows="10" columns="60" id="signature"></textarea>
+
+        <br/>
+
+        <button id="sign">Sign</button>
+        <button id="verify">Verify</button>
+    </section>
+</body>
+</html>
