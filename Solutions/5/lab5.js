@@ -77,7 +77,7 @@ function buildCertificateObject(commonName, organization, organizationUnit, coun
     // Helper functions
 
     function setSerialNumber(cert, serialNumber) {
-        cert.serialNumber = new org.pkijs.asn1.INTEGER({value: serialNumber});;
+        cert.serialNumber = new org.pkijs.asn1.INTEGER({value: serialNumber});
     }
 
     function setSubject(cert, countryCode, organization, organizationUnit, commonName) {

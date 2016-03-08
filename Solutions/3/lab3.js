@@ -30,7 +30,6 @@ function createKeyPair() {
 
         window.crypto.subtle.exportKey("pkcs8", keyPair.privateKey
         ).then(function(pkcs8Buffer) {
-            // This will likely run AFTER the createKeyPair function returns
             var pkcs8Bytes = new Uint8Array(pkcs8Buffer);
             var pkcs8String = byteArrayToBase64(pkcs8Bytes);
             var pkcs8Box = document.getElementById("privatekey");
@@ -57,7 +56,7 @@ function signFile() {
         "pkcs8",
         pkcs8Bytes,
         {name: "RSASSA-PKCS1-v1_5", hash: "SHA-256"},
-        true,
+        false,
         ["sign"]
     ).then(function(privateKey) {
         var file = document.getElementById("datafile").files[0];
@@ -103,7 +102,7 @@ function verifySignature() {
         "spki",
         spkiBytes,
         {name: "RSASSA-PKCS1-v1_5", hash: "SHA-256"},
-        true,
+        false,
         ["verify"]
     ).then(function(publicKey) {
         var file = document.getElementById("datafile").files[0];

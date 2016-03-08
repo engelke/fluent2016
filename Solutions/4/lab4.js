@@ -59,7 +59,7 @@ function encryptFile() {
         "spki",
         spkiBytes,
         {name: "RSA-OAEP", hash: "SHA-256"},
-        true,
+        false,
         ["encrypt"]
     ).then(function(publicKey) {
         // Now we need to create a random session key for encrypting
@@ -144,7 +144,7 @@ function decryptFile() {
         "pkcs8",
         pkcs8Bytes,
         {name: "RSA-OAEP", hash: "SHA-256"},
-        true,
+        false,
         ["decrypt"]
     ).then(function(privateKey) {
         // Now use the private key to decrypt the session key
@@ -157,7 +157,7 @@ function decryptFile() {
         ).then(function(sessionKeyBuffer){
             window.crypto.subtle.importKey(
                 // We can't use the session key until it is in a CryptoKey object
-                "raw", sessionKeyBuffer, {name: "AES-CBC", length: 256}, true, ["decrypt"]
+                "raw", sessionKeyBuffer, {name: "AES-CBC", length: 256}, false, ["decrypt"]
             ).then(function(sessionKey){
                 // Finally, we can read and decrypt the ciphertext file
                 var file = document.getElementById("datafile").files[0];
